@@ -1,0 +1,17 @@
+.unlike {
+  color: red;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.dispBlock {
+  display: block;
+  width: 50%;
+}
+.dispNone {
+  display: none;
+}
