@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import "./Login.css";
 import Header from "../../common/Header.js";
 import Card from "@material-ui/core/Card";
@@ -9,6 +10,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 import Button from "@material-ui/core/Button";
 import FormHelperText from "@material-ui/core/FormHelperText";
+import Home from "../home/Home";
 
 class Login extends Component {
   constructor() {
@@ -21,11 +23,17 @@ class Login extends Component {
       incorrectCredentials: "dispNone",
     };
   }
+
+  //function to handle the event when the login button is clicked on the login component
+  //validates the user input and displays the appropriate error or helper-text message
+  //takes the user to Home page on successful login
+  //the username and password are hard coded as per the reaquirements of the assignment
+  //the username is "username"and the password is "password"
+
   loginClickHandler = (event) => {
-    //alert("clicked");
-    let userName = "moorthy";
-    let password = "1234";
-    let accessToken;
+    let userName = "username";
+    let password = "password";
+
     this.state.username === ""
       ? this.setState({ usernameRequired: "dispBlock" })
       : this.setState({ usernameRequired: "dispNone" });
@@ -41,15 +49,37 @@ class Login extends Component {
     ) {
       this.setState({ incorrectCredentials: "dispBlock" });
     }
+    if (
+      this.state.username === userName &&
+      this.state.loginPassword === password
+    ) {
+      ReactDOM.render(
+        <span>
+          <Home />
+        </span>,
+        document.getElementById("root")
+      );
+    }
   };
+
+  //function to toggle the helper-text from visible to hidden
+
   usernameChangeHandler = (e) => {
     this.setState({ username: e.target.value });
     this.setState({ usernameRequired: "dispNone" });
   };
+
+  //function to toggle the helper-text from visible to hidden
+
   loginPasswordChangeHandler = (e) => {
     this.setState({ loginPassword: e.target.value });
     this.setState({ loginPasswordRequired: "dispNone" });
   };
+
+  //renders the component
+  //jsx to do the rendering
+  //css flex box used to display  card component that conatins the formcontrols
+
   render() {
     return (
       <div className="app-login">

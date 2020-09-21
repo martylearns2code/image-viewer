@@ -1,15 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import Header from './common/Header.js';
-import Login from './screens/login/Login.js';
-import Home from './screens/home/Home.js'; 
-import 'typeface-roboto';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Login from "./screens/login/Login.js";
+import "typeface-roboto";
 
+//renders the Login component
 
 ReactDOM.render(
-    <span>
-        <Home/>
-    </span>, 
-    document.getElementById('root')
+  <span>
+    <Login />
+  </span>,
+  document.getElementById("root")
 );

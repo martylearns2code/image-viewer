@@ -1,6 +1,9 @@
+/*css for the like icon*/
 .unlike {
   color: red;
 }
+
+/*css for card container */
 .card-container {
   display: flex;
   flex-direction: row;
@@ -8,10 +11,13 @@
   width: 100%;
 }
 
+/*css for individual cards when displayed*/
 .dispBlock {
   display: block;
   width: 50%;
 }
+
+/*css to hide the cards while searching */
 .dispNone {
   display: none;
 }

@@ -1,19 +1,20 @@
-.login-card{
-	display:flex;
-	flex-direction:column;
-	justify-content: center;
-	align-items: center;
-	
-	
+.login-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+/*css for helper text*/
 .dispNone {
-    display: none;
+  display: none;
 }
 
+/*css for helper text*/
 .dispBlock {
-    display: block;
+  display: block;
 }
 
+/*css for helper text*/
 .red {
-    color: red;
+  color: red;
 }

@@ -19,13 +19,27 @@ class Header extends Component {
               <div className="dropdown">
                 <span>
                   <IconButton onClick={this.openDropdownMenuHandler}>
-                    <img src={cutie} style={{ width: 70, height: 70 }} />
+                    <img
+                      src={cutie}
+                      style={{ width: 70, height: 70 }}
+                      alt="cutie"
+                    />
                   </IconButton>
                 </span>
                 <div id="myDropdown" class="dropdown-content">
-                  <a href="#">My Account</a>
+                  <button
+                    className="headerButton"
+                    onClick={this.props.goToProfilePage}
+                  >
+                    My Account
+                  </button>
                   <hr />
-                  <a href="#">Logout</a>
+                  <button
+                    className="headerButton"
+                    onClick={this.props.homeLogout}
+                  >
+                    Logout
+                  </button>
                 </div>
               </div>
               <div className="search-container">
